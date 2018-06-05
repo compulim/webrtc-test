@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>WebRTC test</title>
+  </head>
+  <body>
     <script>
       const { getUserMedia } = navigator.mediaDevices || navigator || {};
 
@@ -13,6 +15,12 @@
           err => { alert(`Failed to get audio channel\n\n${ err }`); }
         );
       }
+
+      const version = document.createElement('div');
+
+      version.innerText = navigator.appVersion;
+
+      document.body.appendChild(version);
     </script>
-  </head>
+  </body>
 </html>
